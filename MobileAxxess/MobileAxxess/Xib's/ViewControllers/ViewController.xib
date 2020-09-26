@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="MobileAxxess" customModuleProvider="target">
+            <connections>
+                <outlet property="homeListTableView" destination="JWf-Pl-vOT" id="F6U-7i-Nmv"/>
+                <outlet property="sortByButton" destination="iaF-d4-hVc" id="hbX-Jr-jsi"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Qrn-n9-y3Z"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iaF-d4-hVc">
+                    <rect key="frame" x="0.0" y="44" width="414" height="34"/>
+                    <state key="normal" title="Sort By Image">
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </state>
+                    <state key="selected" title="Sort By Text"/>
+                    <connections>
+                        <action selector="sortTapped:" destination="-1" eventType="touchUpInside" id="bN4-58-s4I"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JWf-Pl-vOT">
+                    <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="spS-La-QwZ"/>
+                        <outlet property="delegate" destination="-1" id="Qqd-ba-BIL"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="JWf-Pl-vOT" secondAttribute="bottom" id="A5W-ZV-KAG"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="JWf-Pl-vOT" secondAttribute="trailing" id="ILA-Hh-beI"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="iaF-d4-hVc" secondAttribute="trailing" id="Sam-EP-CYR"/>
+                <constraint firstItem="iaF-d4-hVc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="d9S-zv-23n"/>
+                <constraint firstItem="JWf-Pl-vOT" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="gbn-CL-EoG"/>
+                <constraint firstItem="JWf-Pl-vOT" firstAttribute="top" secondItem="iaF-d4-hVc" secondAttribute="bottom" constant="10" id="qRY-OL-wu2"/>
+                <constraint firstItem="iaF-d4-hVc" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="wcj-dR-ctE"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="133" y="121"/>
+        </view>
+    </objects>
+</document>
